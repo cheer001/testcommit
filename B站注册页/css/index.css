@@ -1,0 +1,280 @@
+.form {
+  width: 980px;
+  margin: 1em auto;
+}
+
+.form h2 {
+  text-align: center;
+  font-size: 38px;
+  border-bottom: 1px solid #eee;
+  height: 28px;
+}
+
+.form h2 span {
+  background: #fff;
+  padding: 0 15px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.form-area {
+  width: 423px;
+  margin: 0 auto;
+}
+
+.form-area input:focus-visible {
+  outline: none;
+}
+
+.form-area input[type="text"],
+.form-area input[type="email"],
+.form-area input[type="password"],
+.form-area input[type="tel"],
+.form-area input[type="number"],
+.form-area input[type="date"],
+.form-area input[type="time"],
+.form-area input[type="url"],
+.form-area input[type="search"],
+.form-area input[type="color"],
+.form-area input[type="range"],
+.form-area input[type="file"],
+.form-area input[type="radio"],
+.form-area input[type="checkbox"],
+select,
+textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #dcdfe6;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #606266;
+  font-size: 14px;
+  font-family: "PingFangSC-Medium";
+}
+
+.form-area input[type="text"]:focus,
+.form-area input[type="email"]:focus,
+.form-area input[type="password"]:focus,
+.form-area input[type="tel"]:focus,
+.form-area input[type="number"]:focus,
+.form-area input[type="date"]:focus,
+.form-area input[type="time"]:focus,
+.form-area input[type="url"]:focus,
+.form-area input[type="search"]:focus,
+.form-area input[type="color"]:focus,
+.form-area input[type="range"]:focus,
+.form-area input[type="file"]:focus,
+.form-area input[type="radio"]:focus,
+.form-area input[type="checkbox"]:focus,
+.form-area select:focus,
+.form-area textarea:focus {
+  border-color: #4f8ded;
+}
+
+.form-area input[type="text"]:hover,
+.form-area input[type="email"]:hover,
+.form-area input[type="password"]:hover,
+.form-area input[type="tel"]:hover,
+.form-area input[type="number"]:hover,
+.form-area input[type="date"]:hover,
+.form-area input[type="time"]:hover,
+.form-area input[type="url"]:hover,
+.form-area input[type="search"]:hover,
+.form-area input[type="color"]:hover,
+.form-area input[type="range"]:hover,
+.form-area input[type="file"]:hover,
+.form-area input[type="radio"]:hover,
+.form-area input[type="checkbox"]:hover,
+select:hover,
+textarea:hover {
+  border-color: #4f8ded;
+}
+
+.form-area input[type="text"]::placeholder,
+.form-area input[type="email"]::placeholder,
+.form-area input[type="password"]::placeholder,
+.form-area input[type="tel"]::placeholder,
+.form-area input[type="number"]::placeholder,
+.form-area input[type="date"]::placeholder,
+.form-area input[type="time"]::placeholder,
+.form-area input[type="url"]::placeholder,
+.form-area input[type="search"]::placeholder,
+.form-area input[type="color"]::placeholder,
+.form-area input[type="range"]::placeholder,
+.form-area input[type="file"]::placeholder,
+.form-area input[type="radio"]::placeholder,
+.form-area input[type="checkbox"]::placeholder,
+select,
+textarea {
+  color: #999;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.form-item {
+  position: relative;
+}
+
+.form-item.error .error {
+  display: block;
+}
+
+.form-item.error input,
+.form-item.error input:focus,
+.form-item.error input:hover {
+  border-color: #f56c6c;
+}
+
+.form-item .error {
+  display: none;
+  width: 240px;
+  color: #f56c6c;
+  font-size: 12px;
+  position: absolute;
+  top: 22px;
+  right: -250px;
+}
+
+.form-item .select .select-item,
+.form-item .select .input {
+  float: left;
+}
+
+.form-item .select {
+  height: 60px;
+  line-height: 60px;
+  margin: 10px 0;
+}
+
+.form-item .select .select-item {
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+}
+
+.form-item .select .select-item .title {
+  height: 40px;
+  color: #999;
+}
+
+.form-item .select .input {
+  width: calc(100% - 130px);
+}
+
+.form-item .select .input input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-item .select .select-item .choose-items {
+  display: none;
+  width: 128px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+  border: 1px solid #dcdfe6;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  color: #606266;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.form-item .select .select-item .choose-items::-webkit-scrollbar {
+  width: 5px;
+}
+
+.form-item .select .select-item .choose-items div {
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.form-item .select .select-item .choose-items div.selected {
+  color: #4f8ded;
+  font-weight: bold;
+}
+
+.form-item .select .select-item .choose-items div:hover {
+  background: #f5f7fa;
+}
+
+.form-item .select .select-item:hover .choose-items {
+  display: block;
+}
+
+.form-item.code {
+  position: relative;
+}
+
+.form-item.code button {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background: #4f8ded;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #dcdfe6;
+  border: 1px solid #dcdfe6;
+  cursor: not-allowed;
+  box-sizing: border-box;
+}
+
+.form-area .readme {
+  font-size: 12px;
+  color: #999;
+  margin-top: -10px;
+}
+
+.form-area .readme input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: -3px;
+  cursor: pointer;
+}
+
+.form-area .readme span {
+  user-select: none;
+  color: #4f8ded;
+  cursor: pointer;
+}
+
+.tip a {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  color: #4f8ded;
+  text-align: right;
+}
