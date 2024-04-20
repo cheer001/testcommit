@@ -1,0 +1,29 @@
+.fl {
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.aside {
+  width: 200px;
+  background-color: #f1cdcd;
+  float: left;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.main {
+  overflow: hidden;
+  padding: 20px;
+  background-color: #f0f1aa;
+}
