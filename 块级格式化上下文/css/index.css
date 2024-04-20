@@ -1,0 +1,63 @@
+.test1 .container {
+  width: 500px;
+  background-color: #f0f0f0;
+
+  /* 解决浮动元素高度坍塌问题*/
+  /* 方案1 */
+  /* overflow: hidden; */
+  /* 方案3 会影响常规流布局 */
+  /* position: absolute; */
+  /* 方案4 会影响常规流布局*/
+  float: left;
+}
+
+.test1 .container div {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  margin: 10px;
+}
+
+/* 方案2 推荐*/
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.test2 .float-item {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  margin: 10px;
+  float: left;
+}
+
+.test2 .container {
+  height: 300px;
+  background-color: #f0f0f0;
+
+  /* 常规流布局时，块级元素会忽略浮动元素 
+    创建BFC后，BFC区域是一块‘独立渲染区域’ 不会跟其他元素相互干扰【重点】
+    BFC元素 一定会避开浮动元素
+  */
+  overflow: hidden;
+}
+
+.test3 .container {
+  background-color: #f0f0f0;
+  height: 300px;
+  margin-top: 30px;
+  /* 1. 创建BFC 让子元素的外边距跟父元素的外边距独立开，不重叠*/
+  overflow: hidden;
+}
+
+.test3 .container .child {
+  height: 100px;
+  background-color: #f00;
+  margin: 50px;
+}

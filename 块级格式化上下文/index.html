@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div style="background-color: #4d493f; color: white; padding: 10px">
+      <h3>块级格式化上下文</h3>
+      <p><q>Block Formatting Context</q><abbr>BFC</abbr></p>
+
+      <p>BFC是一块独立的渲染区域，它规定了在该区域中，常规流块盒的布局</p>
+      <p style="color: rgb(230, 139, 139)">
+        不同的FBFC区域，它们进行渲染时互不干扰
+      </p>
+      <p style="color: rgb(247, 171, 171)">
+        创建BFC的元素，隔绝了它内部和外部的联系，内部的渲染不会影响到外部
+      </p>
+    </div>
+
+    <h4>具体规则及示例：</h4>
+
+    <fieldset class="test1">
+      <legend>创建BFC的元素，它的自动高度需要计算浮动元素</legend>
+
+      <div class="container">
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+        <div class="fl">float</div>
+      </div>
+    </fieldset>
+
+    <fieldset class="test2">
+      <legend>创建BFC的元素，它的边框盒不会与浮动元素重叠</legend>
+
+      <div class="fl float-item"></div>
+      <div class="container bfc"></div>
+    </fieldset>
+
+    <fieldset class="test3">
+      <legend>创建BFC的元素，不会和它的子元素进行外边距合并</legend>
+
+      <div class="container">
+        <div class="child"></div>
+      </div>
+    </fieldset>
+  </body>
+</html>
